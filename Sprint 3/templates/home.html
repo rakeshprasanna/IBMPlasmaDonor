@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+<!--title tag-->
+{% block title %}
+<title>Plasma-Home</title>
+<style>
+    body{
+    background-image:url('static\\bg.jpg');
+    }
+
+    .heading{
+        padding-top: 30px;
+        text-align: center;
+        font-weight: 500;
+    }
+
+    .profile-area{
+    padding:30px 0;
+    }
+    .card{
+      box-shadow: 0 0 30px rgba(0,0,0,0.1);
+      overflow:hidden;
+      border-radius:15px;
+      margin-top:30px;
+    }
+    .img1 img{
+        height:100px;
+        margin-left:auto;
+        margin-right:auto;
+        /* border-top-right-radius:15px;
+        border-top-left-radius:15px; */
+        width:100%;
+    }
+    
+    .img2 img{
+      margin-left: auto;
+        
+      text-align: center;
+      border-radius: 50%;
+      width: 100px;
+    }
+    .card:hover .img2 img{
+        border-color:bg-primary;
+        transition:.7s
+    }
+    .main-text{
+        padding: 30px 0;
+        text-align:center;
+        }
+    .main-text h2{
+        top:22px;
+        text-transform:uppercase;
+        font-weight: 900;
+        font-size:20px;
+        margin: 0 0 10px;
+    }
+    .main-text p{
+        font-size:16px;
+        padding: 0 35px;
+    }
+    .space{
+    margin-bottom:20px;
+    }
+
+    .bg-primary{
+      background-color:red !important;
+    }
+</style>
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" href="{{ url_for('static',filename='home.css')}}">
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="landing">
+        
+        <div class="landing-text" data-aos="fade-up" data-aos-duration="1000">
+            <h1>Blood donation is important in life. <span style="color: #e0501b; font-size: size 6vw;"></span></h1>
+            <h2>It gives others a hope to survive!</h2>
+            <div class="btn">
+                <a href="{{ url_for('signin') }}" style="text-decoration: none;">Donate Plasma</a>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    </div>
+    </div>
+
+
+
+    
+
+{% endblock %}
